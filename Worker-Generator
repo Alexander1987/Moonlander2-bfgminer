@@ -21,6 +21,7 @@ echo "Usable Frequencies:"
 echo "384, 450, 480, 540, 576, 600, 612, 625, 636, 648, 660, 672, 684, 700, 720, 744, 756, 768, 796, 832, 852, 876, 900, 924, 954."
 echo "**Use Cooling and Powered Hub for anything passed 600!**"
 read varfreq
+echo \
 
 echo "Extra Arguments For cgminer:"
 echo "Example: --suggest-diff 32"
@@ -31,7 +32,7 @@ read varextra
 > $varsave
 
 echo "#!/bin/bash" >> $varsave
-echo "cd cgminer" >> $varsave
+echo "cd bfgminer" >> $varsave
 echo "sudo ./bfgminer --scrypt -o $varlink -u $varworker -p $varpass -S ALL --set MLD:clock=$varfreq $varextra" >> $varsave
 
 chmod +x $varsave
