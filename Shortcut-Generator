@@ -1,0 +1,39 @@
+#!/bin/bash
+
+cd ~/Desktop
+
+echo "Save As:"
+read varsave
+echo \
+
+echo "Username for system:"
+read varname
+echo \
+
+echo "Bash File:"
+read varbash
+echo \
+
+
+
+> $varsave.desktop
+
+echo "[Desktop Entry]" >> $varsave.desktop
+echo "Type=Application" >> $varsave.desktop
+echo "Name=$varsave" >> $varsave.desktop
+echo "Comment=bfgminer shortcut" >> $varsave.desktop
+echo "Exec=/home/$varname/.$varbash" >> $varsave.desktop
+echo "Icon=/home/$varname/Moonlander2-bfgminer/bfgminer/bfg.png" >> $varsave.desktop
+echo "Terminal=true" >> $varsave.desktop
+
+chmod +x $varsave.desktop
+
+cd
+
+> .$varbash
+
+echo "#!/bin/bash" >> .$varbash
+echo "cd Moonlander2-bfgminer" >> .$varbash
+echo "./$varbash" >> .$varbash
+
+chmod +x .$varbash
