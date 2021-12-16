@@ -23,17 +23,11 @@ echo "**Use Cooling and Powered Hub for anything passed 600!**"
 read varfreq
 echo \
 
-echo "Extra Arguments For cgminer:"
-echo "Example: --suggest-diff 32"
-echo "**If None hit Enter**"
-read varextra
-
-
 > $varsave
 
 echo "#!/bin/bash" >> $varsave
 echo "cd bfgminer" >> $varsave
-echo "sudo ./bfgminer --scrypt -o $varlink -u $varworker -p $varpass -S ALL --set MLD:clock=$varfreq $varextra" >> $varsave
+echo "sudo ./bfgminer --scrypt -o $varlink -u $varworker -p $varpass -S ALL --set MLD:clock=$varfreq" >> $varsave
 
 chmod +x $varsave
 
