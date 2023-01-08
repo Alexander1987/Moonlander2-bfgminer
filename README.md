@@ -1,6 +1,6 @@
 # Moonlander2-bfgminer
 
-
+# Currently only works up to Raspberry Pi Buster OS
 
 bfgminer for Moonlander2 USBs
 
