@@ -14,6 +14,12 @@ Wait for the AutoInstaller to finish and then use the Worker Generator to make e
 
 	$ ./Worker-Generator
 
+Select the CPU type that bfgminer will be running on, ARM for SBCs and x86 for Desktops.
+	
+	  CPU type:
+	  arm or x86
+	  arm
+
 First, choose a name for the bash script to be saved as, no spaces allowed.
 
 	  Save As:
